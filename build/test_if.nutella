@@ -1,0 +1,17 @@
+
+int RunIf(int Val)
+{
+    if (Val < 3)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+void WinMainCRTStartup()
+{
+    int a = #run (RunIf(5));
+}

@@ -1,0 +1,28 @@
+
+struct Type1
+{
+    int a;
+};
+
+struct Type2
+{
+    Type1 T1;
+    float b;
+};
+
+Type2 TestTypes()
+{
+    Type1 Var1;
+    Var1.a = 5;
+
+    Type2 Var2;
+    Var2.T1 = *&Var1;
+
+    return Var2;
+}
+
+Type2* TestTypes2()
+{
+    Type2 Var1;
+    return &Var1;
+}

@@ -1,0 +1,14 @@
+
+int RunPtrs()
+{
+    int a = 3;
+    int* b = &a;
+    *b = 4;
+    a = a + 3;
+    return a;
+}
+
+void WinMainCRTStartup()
+{
+    int Val = #run (RunPtrs());
+}

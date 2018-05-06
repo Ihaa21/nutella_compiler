@@ -1,0 +1,20 @@
+
+struct vec
+{
+    int x;
+    int y;
+};
+
+int test(vec* v)
+{
+    return v.x + v.y;
+}
+
+void WinMainCRTStartup()
+{
+    vec y;
+    y.x = 1;
+
+    int result = test(&y);
+}
+

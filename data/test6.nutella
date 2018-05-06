@@ -1,0 +1,10 @@
+
+struct someType
+{
+    int b;
+};
+
+void GetNonExistingMember(someType T)
+{
+    float Val = T.c;
+}

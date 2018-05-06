@@ -1,0 +1,7 @@
+
+int GlobalName = 5;
+
+int SomeName()
+{
+    return *****;
+}

@@ -1,0 +1,9 @@
+struct a
+{
+    int d;
+}
+
+struct a
+{
+    float c;
+}

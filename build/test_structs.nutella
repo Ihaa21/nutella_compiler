@@ -1,0 +1,15 @@
+struct vec
+{
+    int x;
+    int y;
+}
+
+void WinMainCRTStartup()
+{
+    vec v0;
+    v0.x = 1;
+    vec* vptr = &v0;
+    vptr.y = 3;
+    vec v1 = *vptr;
+    int result = v1.x + v1.y;
+}

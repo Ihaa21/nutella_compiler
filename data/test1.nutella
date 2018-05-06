@@ -1,0 +1,32 @@
+
+struct vector
+{
+    int x;
+    int y;
+}
+
+int DotProduct(vector V1, vector V2)
+{
+    int ReturnValue = V1.x*V2.x + V1.y*V2.y;
+    return ReturnValue;
+}
+
+int DotProductPtr(vector* V1, vector* V2)
+{
+    int ReturnValue = V1.x*V2.x + V1.y*V2.y;
+    return ReturnValue;
+}
+
+void WinMainCRTStartup()
+{
+    vector V1;
+    V1.x = 5;
+    V1.y = 6;
+
+    vector V2;
+    V2.x = 10;
+    V2.y = 15;
+
+    int Result1 = DotProduct(V1, V2);
+    int Result2 = DotProductPtr(&V1, &V2);
+}

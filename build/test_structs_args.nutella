@@ -1,0 +1,18 @@
+struct vec
+{
+    int x;
+    int y;
+}
+
+int VecOp(vec v)
+{
+    return v.x + v.y;
+}
+
+void WinMainCRTStartup()
+{
+    vec v0;
+    v0.x = 1;
+    v0.y = 0;
+    int result = VecOp(v0);
+}

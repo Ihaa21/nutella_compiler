@@ -1,0 +1,31 @@
+captures which restrict global variables in a code block, function, local function, etc.
+
+code refactorability with lambdas, local func, global func, file only func, etc.
+
+Jai has names on the left then semi colon and then types. For pointers, we specify ^type where type is the type we are pointing to. For array pointer, we write name : [size] type or [size] ^type if its a array of pointers (so array decleration is always left most).
+
+Default values are 0 (or specified in the build) and we can specify to not init some values or choose default values like in C. For structs, we can use default constructors to provide default values or write the default values by the variables in the decleration of the struct. To not give default values, we do f : float = ---; or 
+
+struct v2
+{
+x : float = ---;
+y : float = ---;
+}
+
+to have the struct not have default init values. If we want to not have default values for a struct with default values, just write test : v4 = ---; (works on arrays, structs, values, allocations wit hnew, etc). v4 := new Vector4 ---;
+
+Have everything done in its current scope (local structs, local functions, etc in the current scope)
+
+Using the #run keyword, have a way to check functions so that we get errors in compilation if they are used incorrectly, so that we can get the same level of error checking and extend our compiler to understand new data structures like it does for default ones (arrays).
+
+jai has a lot of different functionality for iteration over arrays to make sure that if we wanna add or remove elements from an array, we don't have way more complex for loops (mostly about dynamic arrays). In my language, probs not worth doing due to time constraints (just have statically sized arrays and let them be on the stack or on the heap but the size is fixed).
+
+In nested loops, you can choose which loop to continue or break using continue iter_name and have the iter_name be unique for different nested loops (or break j). This way, we don't need to add extra bools or control flow manually to make the loop more complex and work vs language support.
+
+Enums and enum introspection (struct introspection) would be cool but hard to do in our time frame so consider it but maybe not. jai does it.
+
+Make compiler reorder code to not care about order of definitions.
+
+Make casting types a function eg: cast(val, new type); instead of c++ and c syntax (type)val; or (type)(val);.
+
+Inlining is in jai and maybe easy to implement but im not sure its worth doing. (you can't inline recursive functions). jai lets you specify in definition, at calling site, and by directive (inline based on platform).

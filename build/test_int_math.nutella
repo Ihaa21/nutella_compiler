@@ -1,0 +1,10 @@
+
+int RunMath(int A, int B)
+{
+    return A * 2 * B - 3 + 4;
+}
+
+void WinMainCRTStartup()
+{
+    int Val = #run (RunMath(3, 4));
+}

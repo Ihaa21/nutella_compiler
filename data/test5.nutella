@@ -1,0 +1,19 @@
+
+struct Float
+{
+    float Val;
+};
+
+Float MathExpr1(Float a)
+{
+    Float[] Array;
+    Float Return;
+
+    Return.Val = (Array[0].Val + Array[1].Val) * Array[2].Val / (Array[3].Val + 5.0);
+    return Return;
+}
+
+int MathExpr2(int a)
+{
+    return -(a*2) + -5 / 3 - -4;
+}

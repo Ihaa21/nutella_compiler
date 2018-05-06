@@ -1,0 +1,7 @@
+
+int GlobalName = 5;
+
+int SomeFunc()
+{
+    float GlobalName = 6.0;
+}

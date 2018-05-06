@@ -1,0 +1,22 @@
+
+int test(int a)
+{
+    if (true)
+    {
+    }
+    else if (1 < 2)
+    {
+    }
+    else if (a >= 5)
+    {
+    }
+    else
+    {
+        while (false)
+        {
+            a = a + 1;
+        }
+    }
+}
+
+int Global = test(5);
